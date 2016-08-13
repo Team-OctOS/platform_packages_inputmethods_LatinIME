@@ -23,6 +23,30 @@
 >
     <include
         latin:keyboardLayout="@xml/key_styles_common" />
+    <!-- Number row -->
+    <Row>
+        <switch>
+            <!-- Split keyboard layout for the number row -->
+            <case
+                latin:isSplitLayout="true"
+            >
+                <include
+                    latin:keyboardLayout="@xml/rowkeys_qwerty0_left5"
+                    latin:keyWidth="7.0%p" />
+                <Spacer
+                    latin:keyWidth="20.0%p" />
+                <include
+                    latin:keyboardLayout="@xml/rowkeys_qwerty0_right5"
+                    latin:keyWidth="7.0%p" />
+            </case>
+            <!-- Regular layout for the first row -->
+            <default>
+                <include
+                    latin:keyboardLayout="@xml/rowkeys_qwerty0"
+                    latin:keyWidth="10%p" />
+            </default>
+        </switch>
+    </Row>
     <!-- First row -->
     <Row>
         <switch>
@@ -38,18 +62,12 @@
                 <include
                     latin:keyboardLayout="@xml/rowkeys_qwerty1_right5"
                     latin:keyWidth="7.0%p" />
-                <Key
-                    latin:keyStyle="deleteKeyStyle"
-                    latin:keyWidth="10.0%p" />
             </case>
             <!-- Regular layout for the first row -->
             <default>
                 <include
                     latin:keyboardLayout="@xml/rowkeys_qwerty1"
-                    latin:keyWidth="9.0%p" />
-                <Key
-                    latin:keyStyle="deleteKeyStyle"
-                    latin:keyWidth="fillRight" />
+                    latin:keyWidth="10%p" />
             </default>
         </switch>
     </Row>
@@ -69,19 +87,13 @@
                 <include
                     latin:keyboardLayout="@xml/rowkeys_qwerty2_right4"
                     latin:keyWidth="7.0%p" />
-                <Key
-                    latin:keyStyle="enterKeyStyle"
-                    latin:keyWidth="10.0%p" />
             </case>
             <!-- Regular layout for the second row -->
             <default>
                 <include
                     latin:keyboardLayout="@xml/rowkeys_qwerty2"
                     latin:keyXPos="4.5%p"
-                    latin:keyWidth="9.0%p" />
-                <Key
-                    latin:keyStyle="enterKeyStyle"
-                    latin:keyWidth="fillRight" />
+                    latin:keyWidth="10%p" />
             </default>
         </switch>
     </Row>
@@ -99,16 +111,14 @@
                     latin:keyboardLayout="@xml/rowkeys_qwerty3_left4"
                     latin:keyWidth="7.0%p" />
                 <Spacer
-                    latin:keyWidth="17.0%p" />
+                    latin:keyWidth="19.0%p" />
                 <include
                     latin:keyboardLayout="@xml/rowkeys_qwerty3_right3"
                     latin:keyWidth="7.0%p" />
-                <include
-                    latin:keyboardLayout="@xml/keys_exclamation_question"
-                    latin:keyWidth="7.0%p" />
                 <Key
-                    latin:keyStyle="shiftKeyStyle"
-                    latin:keyWidth="10.0%p" />
+                    latin:keyStyle="deleteKeyStyle"
+                    latin:keyWidth="fillRight"
+                    latin:visualInsetsLeft="1%p" />
             </case>
             <!-- Regular layout for the third row -->
             <default>
@@ -117,13 +127,11 @@
                     latin:keyWidth="10.0%p" />
                 <include
                     latin:keyboardLayout="@xml/rowkeys_qwerty3"
-                    latin:keyWidth="9.0%p" />
-                <include
-                    latin:keyboardLayout="@xml/keys_exclamation_question"
-                    latin:keyWidth="9.0%p" />
+                    latin:keyWidth="10%p" />
                 <Key
-                    latin:keyStyle="shiftKeyStyle"
-                    latin:keyWidth="fillRight" />
+                    latin:keyStyle="deleteKeyStyle"
+                    latin:keyWidth="fillRight"
+                    latin:visualInsetsLeft="1%p" />
             </default>
         </switch>
     </Row>
