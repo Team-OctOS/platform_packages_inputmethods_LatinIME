@@ -26,61 +26,49 @@
     <include
         latin:keyboardLayout="@xml/key_styles_currency" />
     <Row
-        latin:keyWidth="9.0%p"
+        latin:keyWidth="10%p"
     >
         <include
 	    latin:keyboardLayout="@xml/rowkeys_symbols0" />
-        <Key
-	    latin:keyStyle="tabKeyStyle"
-	    latin:keyWidth="fillRight" />
     </Row>
     <Row
-        latin:keyWidth="9.0%p"
+        latin:keyWidth="10%p"
     >
         <include
             latin:keyboardLayout="@xml/rowkeys_symbols_shift1" />
-        <Key
-            latin:keyStyle="deleteKeyStyle"
-            latin:keyWidth="fillRight" />
     </Row>
     <Row
-        latin:keyWidth="9.0%p"
+        latin:keyWidth="10%p"
     >
         <include
-            latin:keyboardLayout="@xml/rowkeys_symbols_shift2"
-            latin:keyXPos="4.5%p" />
-        <Key
-            latin:keyStyle="enterKeyStyle"
-            latin:keyWidth="fillRight" />
+            latin:keyXPos="5%p"
+            latin:keyboardLayout="@xml/rowkeys_symbols_shift2" />
     </Row>
     <Row
-        latin:keyWidth="9.0%p"
+        latin:keyWidth="10%p"
     >
         <Key
             latin:keyStyle="backFromMoreSymbolKeyStyle"
-            latin:keyWidth="10.0%p" />
+            latin:keyWidth="15%p"
+            latin:visualInsetsRight="1%p" />
         <include
             latin:keyboardLayout="@xml/rowkeys_symbols_shift3" />
-        <!-- U+00A1: "¡" INVERTED EXCLAMATION MARK -->
         <Key
-            latin:keySpec="&#x00A1;" />
-        <!-- U+00BF: "¿" INVERTED QUESTION MARK -->
-        <Key
-            latin:keySpec="&#x00BF;" />
-        <Key
-            latin:keyStyle="backFromMoreSymbolKeyStyle"
-            latin:keyWidth="fillRight" />
+            latin:keyStyle="deleteKeyStyle"
+            latin:keyWidth="fillRight"
+            latin:visualInsetsLeft="1%p" />
     </Row>
     <Row
-        latin:keyWidth="9.0%p"
+        latin:keyWidth="10%p"
         latin:backgroundType="functional"
     >
         <Key
             latin:keyStyle="toAlphaKeyStyle"
-            latin:keyWidth="10%p" />
+            latin:keyWidth="15%p" />
         <include
             latin:keyboardLayout="@xml/row_symbols_shift4" />
-        <include
-            latin:keyboardLayout="@xml/key_emoji" />
+        <Key
+            latin:keyStyle="enterKeyStyle"
+            latin:keyWidth="fillRight" />
     </Row>
 </merge>
